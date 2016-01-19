@@ -7,15 +7,20 @@ var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
 
-gulp.task('sass', function() {
+var browserSync = require('browser-sync').get('server')
+
+gulp.task('sass', function( cb ) {
     var processors = [
         autoprefixer({browsers: ['last 2 versions']}),
         mqpacker,
         csswring
     ];
 
-    gulp.src( config.src )
+    return gulp.src( config.src )
         .pipe( sass() )
         .pipe( postcss(processors) )
-        .pipe( gulp.dest( config.dest ) );
+        .pipe( gulp.dest( config.dest ) )
+        .pipe( browserSync.stream() );
 });
+
+gulp.watch(config.src, ['sass']);

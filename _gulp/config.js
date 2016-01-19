@@ -1,13 +1,13 @@
 var dest = "./build";
-var src = './src';
+var source = './src';
 var demoSrc = './demos';
 
 module.exports = {
-  sass: {
-    src: [
-      src + "/sass/**/*.scss"
-    ],
-    outputName: 'app.css',
-    dest: dest + "/css"
-  }
+    sass: {
+        src: [
+            source + '/sass/**/*.scss'
+        ],
+        outputName: 'app.css',
+        dest: dest + "/css"
+    }
 };
