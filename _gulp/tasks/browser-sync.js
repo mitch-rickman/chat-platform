@@ -7,4 +7,6 @@ gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: "./build"
     });
+
+    gulp.watch(config.html.src + "/*.html").on('change', browserSync.reload)
 });

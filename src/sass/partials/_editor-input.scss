@@ -1,0 +1,83 @@
+.input {
+    border-bottom: 1px solid #ccc;
+    color: $color--body;
+    padding: 1.5em 0;
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+
+    &__name {
+        color: lighten($color--body, 40%);
+        font-size: 1em;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__text {
+        color: $color--body;
+        font-size: 1.2em;
+    }
+
+    &__link-group {
+        margin: 0 0 1em 1em;
+    }
+
+    &__link-list {
+        margin: 0;
+    }
+
+    &__link {
+        background: #ddd;
+        border-radius: 4px;
+        display: block;
+        padding: .5em;
+        margin: .5em 0;
+        position: relative;
+
+        &:hover {
+            &:after {
+                color: $color--body;
+            }
+        }
+
+        &:after {
+            content: "X";
+            color: lighten( $color--body, 40% );
+            cursor: pointer;
+            position: absolute;
+            right: .5em;
+            transition: all .2s ease;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+
+    }
+
+    &__buttons {
+        margin: 0;
+
+        &--link-group {
+            @extend .input__buttons;
+            margin: .25em 0 0 0;
+        }
+    }
+
+    &__add-new {
+        background: #ddd;
+        padding: 1em;
+        text-align: center;
+
+        
+    }
+
+
+    &--user {
+        @extend .input;
+
+        text-align: right;
+    }
+}

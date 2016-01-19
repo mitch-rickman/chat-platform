@@ -1,15 +1,13 @@
 @import "partials/variables";
-
+@import "partials/fonts";
 @import "partials/reset";
-@import "libs/bootstrap/bootstrap";
 
 @import "partials/base";
 @import "partials/login";
 
+@import "partials/layout";
 @import "partials/toolbar";
 @import "partials/project-list";
+@import "partials/editor";
 
-
-body {
-    background: blue;
-}
+@import "partials/buttons";

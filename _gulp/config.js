@@ -9,5 +9,8 @@ module.exports = {
         ],
         outputName: 'app.css',
         dest: dest + "/css"
+    },
+    html: {
+        src: dest
     }
 };
