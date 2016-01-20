@@ -30,7 +30,7 @@
         background: #ddd;
         border-radius: 4px;
         display: block;
-        padding: .5em;
+        padding: .5em 2em .5em .5em;
         margin: .5em 0;
         position: relative;
 
@@ -40,20 +40,34 @@
             }
         }
 
-        .close {
-            color: lighten( $color--body, 20% );
-            cursor: pointer;
-            position: absolute;
-            right: .5em;
-            transition: all .2s ease;
-            font-size: 20px;
-        }
-
         &:last-of-type {
             margin-bottom: 0;
         }
 
+        .close {
+            color: lighten( $color--body, 20% );
+            cursor: pointer;
+            margin-top: -11px;
+            position: absolute;
+            right: .5em;
+            top: 50%;
+            transition: all .2s ease;
+            font-size: 20px;
+        }
 
+        input, textarea {
+            background: none;
+            border: 0;
+            color: $color--body;
+            display: block;
+            font-size: 1em;
+            height: 22px;
+            margin: 0 30px 0 0;
+            outline: 0;
+            padding: 0;
+            resize: none;
+            width: 100%;
+        }
     }
 
     &__buttons {
