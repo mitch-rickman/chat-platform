@@ -8,5 +8,7 @@ gulp.task('serve', ['sass'], function() {
         server: "./build"
     });
 
-    gulp.watch(config.html.src + "/*.html").on('change', browserSync.reload)
+    gulp.watch(config.sass.src, ['sass']);
+    gulp.watch(config.js.src, ['lint']);
+    gulp.watch(config.html.src + "/*.html").on('change', browserSync.reload);
 });

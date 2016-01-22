@@ -10,6 +10,9 @@ module.exports = {
         outputName: 'app.css',
         dest: dest + "/css"
     },
+    js: {
+        src: source + '/js/**/*.js'
+    },
     html: {
         src: dest
     }

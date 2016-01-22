@@ -7,7 +7,7 @@ var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
 
-var browserSync = require('browser-sync').get('server')
+var browserSync = require('browser-sync').get('server');
 
 gulp.task('sass', function( cb ) {
     var processors = [
@@ -22,5 +22,3 @@ gulp.task('sass', function( cb ) {
         .pipe( gulp.dest( config.dest ) )
         .pipe( browserSync.stream() );
 });
-
-gulp.watch(config.src, ['sass']);
