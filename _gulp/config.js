@@ -1,4 +1,4 @@
-var dest = "./build";
+var build = "./build";
 var source = './src';
 var demoSrc = './demos';
 
@@ -7,13 +7,14 @@ module.exports = {
         src: [
             source + '/sass/**/*.scss'
         ],
-        outputName: 'app.css',
-        dest: dest + "/css"
+        build: build + "/css"
     },
     js: {
-        src: source + '/js/**/*.js'
+        src: source + '/js/**/*.js',
+        build: build + "/js"
     },
-    html: {
-        src: dest
+    templates: {
+        src: source + '/templates/**/*.*',
+        build: build
     }
 };
