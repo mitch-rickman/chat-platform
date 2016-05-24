@@ -1,29 +1,10 @@
 .editor {
-    background: rgba(black, .6);
-    display: none;
-    position: fixed;
-    width:100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    padding: 3em;
-    box-sizing: border-box;
-    text-align: center;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
+    &__sidebar {
+        width: 25%;
     }
 
     &__content {
-        background: #fff;
-        display: inline-block;
-        padding: 2em;
-        max-width: 600px;
-        width: 100%;
-        text-align: left;
-        vertical-align: middle;
+        width: 75%;
     }
+
 }

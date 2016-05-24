@@ -3,12 +3,6 @@
 @import 'partials/base';
 @import 'partials/base-layout';
 
-// import bootstrap grids
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
-@import 'overrides/bootstrap';
-@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
-
 @import 'partials/header';
 @import 'partials/motivations';
 @import 'partials/editor';

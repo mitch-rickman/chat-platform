@@ -4,9 +4,17 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-h1 {
+h1, .title {
     font-size: 2.5rem;
-    color: #fff;
+    color: $text;
+
+    &--editor {
+        @extend .title;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+    }
 }
 
 strong {

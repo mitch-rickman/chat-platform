@@ -17,11 +17,11 @@
     &--primary {
         @extend .button;
 
-        background: lighten($highlight, 15%);
+        background: lighten($secondary, 15%);
         color: #fff;
 
         &:hover, &:active {
-            background: $highlight;
+            background: $secondary;
         }
 
         &:disabled {
@@ -29,7 +29,7 @@
             opacity: .4;
 
             &:hover, &:active {
-                background: lighten($highlight, 15%);
+                background: lighten($secondary, 15%);
             }
         }
     }
@@ -44,8 +44,8 @@
         }
 
         &.active {
-            background: lighten($highlight, 15%);
-            border-color: lighten($highlight, 15%);
+            background: lighten($secondary, 15%);
+            border-color: lighten($secondary, 15%);
             color: #fff;
         }
     }
