@@ -38,5 +38,28 @@
   "bugs": {
     "url": "https://github.com/mitch-rickman/chat-platform/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/mitch-rickman/chat-platform"
+=======
+  "homepage": "https://github.com/mitch-rickman/chat-platform#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "browser-sync": "^2.11.0",
+    "css-mqpacker": "^4.0.0",
+    "csswring": "^4.1.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "jshint": "^2.9.1",
+    "require-dir": "^0.3.0"
+  },
+  "dependencies": {}
+>>>>>>> ee0ee977b84ea6d351dbea83c0542cf64ce0e535
 }
