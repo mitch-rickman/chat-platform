@@ -1,0 +1,17 @@
+.slideshow {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+
+    &__slide {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 110%;
+        width: 100%;
+
+        &.active {
+            left: 0;
+        }
+    }
+}

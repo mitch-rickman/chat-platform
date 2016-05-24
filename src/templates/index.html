@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app="reminderApp">
+    <head>
+        <title>Motivation App</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <h1>Reminder app</h1>
+                </div>
+            </header>
+            <main class="container">
+                
+                <ul class="motivations" ng-controller="reminderList as reminderList">
+                    <li class="motivations__item" ng-repeat="reminder in reminderList.reminders">
+                        <h2 class="motivations__title">{{reminder.name}}</h2>
+                        <div class="motivations__meta">
+                            <span ng-if="reminder.increment=='hour'">
+                                Every <strong>{{reminder.increment}}</strong> starting at <strong>{{reminder.meta.start}}</strong> and ending at <strong>{{reminder.meta.end}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='day'">
+                                Every <strong>{{reminder.increment}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='week'">
+                                Every <strong>{{reminder.increment}}</strong> on <strong>{{reminder.meta.day}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='month'">
+                                Every <strong>{{reminder.increment}}</strong> on the <strong>{{reminder.meta.day | ordinal}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+
+                            <span ng-if="reminder.increment=='year'">
+                                Every <strong>{{reminder.increment}}</strong> on <strong>{{reminder.meta.month}} {{reminder.meta.day | ordinal}}</strong> at <strong>{{reminder.meta.time}}</strong>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div>
+                    <button class="button">Add reminder</button>
+                </div>
+            </main>
+        </div>
+
+        <div class="editor">
+            <div class="editor__content">
+                <form class="form" action="">
+                    <div class="slideshow">
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What do you need to remember?</label>
+                                <input type="text" placeholder="Ex: Mow the lawn">
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">How often do you need to be reminded?</label>
+                                <div class="container--fluid">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid button--secondary">Hourly</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid button--secondary">Daily</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid  button--secondary">Monthly</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form__input-wrap">
+                                                <button class="button--fluid  button--secondary">Yearly</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HOURLY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">When do you want to start?</label>
+                                <input type="text" class="time-input" value="9:00 AM">
+                            </div>
+
+                            <div class="form__input-wrap">
+                                <label for="">When do you want to stop?</label>
+                                <input type="text" class="time-input" value="5:00 PM">
+                            </div>
+                        </div>
+                        <!-- END HOURLY  -->
+
+                        <!-- DAILY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="text" class="time-input" value="9:00 AM">
+                            </div>
+                        </div>
+                        <!-- END DAILY  -->
+
+                        <!-- WEEKLY  -->
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What day?</label>
+                                <div class="form__select">
+                                    <select name="" id="">
+                                        <option value="">Sunday</option>
+                                        <option value="">Monday</option>
+                                        <option value="">Tuesday</option>
+                                        <option value="">Wednesday</option>
+                                        <option value="">Thursday</option>
+                                        <option value="">Friday</option>
+                                        <option value="">Saturday</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="text" class="time-input" value="9:00 AM">
+                            </div>
+                        </div>
+                        <!-- END WEEKLY  -->
+
+                        <!-- YEARLY  -->
+                        <div class="slideshow__slide active">
+                            <div class="form__input-wrap">
+                                <label for="">What day?</label>
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="slideshow__slide">
+                            <div class="form__input-wrap">
+                                <label for="">What time?</label>
+                                <input type="text" class="time-input" value="9:00 AM">
+                            </div>
+                        </div>
+                        <!-- END YEARLY  -->
+                    </div>
+
+                    <div class="form__footer">
+                        <div class="container--fluid">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <button class="button button--fluid">Back</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="button--primary button--fluid" disabled>Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="button">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+.form {
+    label {
+        display: block;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+
+    %field {
+        background: #fff;
+        border: 1px solid $grey;
+        border-radius: 0;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        padding: .5em;
+        font-size: 1.25em;
+        outline: none;
+    }
+
+    input {
+        @extend %field;
+
+        &[type="text"] {
+
+        }
+    }
+
+    &__select {
+        background: #fff;
+        position: relative;
+
+        &:after {
+            border: .75em solid transparent;
+            border-top-color: $grey;
+            content: "";
+            position: absolute;
+            right: .75em;
+            top: 50%;
+            transform: translate(0, -.4em);
+        }
+        select {
+            @extend %field;
+
+            appearance: none;
+        }
+
+    }
+
+    &__input-wrap {
+        margin-bottom: 1em;
+    }
+}
