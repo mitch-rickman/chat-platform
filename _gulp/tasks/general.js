@@ -1,18 +1,23 @@
-var config = require('../config');
+var config = require('../gulp.config.js');
 var gulp = require('gulp');
-var watch = require('gulp-watch');
 var sass = require('./sass');
-var js = require('./js');
 var templates = require('./templates');
+var js = require('./js');
+var api = require('./api');
 
-gulp.task('default', ['build:sass', 'build:js', 'build:templates']);
+var watch = require('gulp-watch');
+
+gulp.task('default', ['build:sass', 'build:templates', 'build:js', 'build:api' ]);
 
 gulp.task('watch', function() {
-    watch(config.sass.src, function() {
-        gulp.start("build:sass");
+    watch(config.css.src, function() {
+        gulp.start('build:sass');
+    });
+    watch(config.templates.src, function() {
+        gulp.start('build:templates');
     });
 
-    watch(config.js.src, function() {
-        gulp.start("build:js");
+    watch(config.api.src, function() {
+        gulp.start('build:api');
     })
-})
+});

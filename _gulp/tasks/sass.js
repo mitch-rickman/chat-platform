@@ -1,21 +1,21 @@
-var config = require('../config');
-
+var config = require('../gulp.config.js');
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+
+// css processors
 var postcss = require('gulp-postcss');
+var sass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
-var csswring = require('csswring');
 
-gulp.task('build:sass', function( cb ) {
+gulp.task('build:sass', function() {
     var processors = [
-        autoprefixer({browsers: ['last 2 versions']}),
-        mqpacker,
-        csswring
+        autoprefixer({browsers: ["last 2 versions"]}),
+        mqpacker
     ];
 
-    return gulp.src( config.sass.src )
+    return gulp.src( config.css.src )
         .pipe( sass().on('error', sass.logError) )
         .pipe( postcss(processors) )
-        .pipe( gulp.dest( config.sass.build ) );
+        .pipe( gulp.dest( config.css.build ) );
+
 });
