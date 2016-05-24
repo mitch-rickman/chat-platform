@@ -1,1 +1,1 @@
-# motivation-app
+# Chat platform
