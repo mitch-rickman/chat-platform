@@ -1,10 +1,27 @@
 .editor {
+    height: 80vh;
+
     &__sidebar {
-        width: 25%;
+        background: $grey--light;
+        border-right: 2px solid $grey;
+        box-sizing: border-box;
+        float: left;
+        height: 100%;
+        padding: 1em;
+        width: 30%;
+        overflow: auto;
+    }
+
+    &__sidebar-content {
+        max-height: 100%;
     }
 
     &__content {
-        width: 75%;
+        box-sizing: border-box;
+        float: left;
+        height: 100%;
+        padding: 1em;
+        width: 70%;
     }
 
 }
