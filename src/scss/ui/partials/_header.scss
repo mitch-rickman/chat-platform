@@ -3,10 +3,12 @@
 	color: $header--color;
 
 	&__title {
-
+		display: inline-block;
 	}
 
 	&__tools {
+		float: right;
+		
 		li {
 			display: inline-block;
 		}
