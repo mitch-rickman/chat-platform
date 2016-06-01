@@ -1,0 +1,30 @@
+// general colors
+$grey--dark: #31363d;
+$grey--medium: #646464;
+$grey--background: #e1e2e8;
+
+
+// header settings
+$header--background: $grey--dark;
+$header--color: #fff;
+
+
+// footer settings
+$footer--background: $grey--background;
+$footer--color: #e1e2e8;
+
+
+// User chat bubble settings
+$user--text: #7c7d80;
+$user--background: none;
+
+
+// Alme chat bubble settings
+$alme--text: $grey--dark;
+$alme--background: $grey--background;
+
+$alme--button-background: #fff;
+$alme--button-text: $alme--text;
+
+$alme--icon-background: $grey--background;
+$alme--icon-color: $grey--dark;

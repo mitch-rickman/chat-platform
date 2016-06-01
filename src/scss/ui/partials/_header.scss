@@ -1,0 +1,20 @@
+.alme-header {
+	background: $header--background;
+	color: $header--color;
+
+	&__title {
+
+	}
+
+	&__tools {
+		li {
+			display: inline-block;
+		}
+
+		button {
+			appearance: none;
+			background: 0;
+			border: 0;
+		}
+	}
+}
