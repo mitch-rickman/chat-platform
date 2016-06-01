@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="reminderApp">
+<html ng-app="chatBuilder">
     <head>
         <title>Motivation App</title>
         <link rel="stylesheet" href="css/main.css">
@@ -13,12 +13,15 @@
                 </div>
             </header>
             <main class="editor">
-                <div class="editor__sidebar">
+                <div class="editor__sidebar" ng-controller="conversationEditor as editor">
                     <div class="editor__sidebar-content">
-                        <div class="editor-input">
+                        <div class="editor-input" ng-repeat="input in editor.inputs">
+                            <h3 class="editor-input__label">{{input.user}}</h3>
+                            <div ng-include="'./partials/user-input.html'"></div>
+                        </div>
+                        <!-- <div class="editor-input">
                             <h3 class="editor-input__label">User</h3>
                             <textarea class="editor-input__input" placeholder="Type here"></textarea>
-                            <button></button>
                         </div>
 
                         <div class="editor-input--alme">
@@ -28,35 +31,8 @@
                                 <button class="button--text">+ Add header</button>
                                 <button class="button--text">+ Add link</button>
                             </div>
-                        </div>
-                        <div class="editor-input">
-                            <h3 class="editor-input__label">User</h3>
-                            <textarea class="editor-input__input" placeholder="Type here"></textarea>
-                            <button></button>
-                        </div>
+                        </div> -->
 
-                        <div class="editor-input--alme">
-                            <h3 class="editor-input__label">Alme</h3>
-                            <textarea class="editor-input__input" placeholder="Type here"></textarea>
-                            <div class="editor-input__controls">
-                                <button class="button--text">+ Add header</button>
-                                <button class="button--text">+ Add link</button>
-                            </div>
-                        </div>
-                        <div class="editor-input">
-                            <h3 class="editor-input__label">User</h3>
-                            <textarea class="editor-input__input" placeholder="Type here"></textarea>
-                            <button></button>
-                        </div>
-
-                        <div class="editor-input--alme">
-                            <h3 class="editor-input__label">Alme</h3>
-                            <textarea class="editor-input__input" placeholder="Type here"></textarea>
-                            <div class="editor-input__controls">
-                                <button class="button--text">+ Add header</button>
-                                <button class="button--text">+ Add link</button>
-                            </div>
-                        </div>
 
                         <div class="editor__sidebar-controls">
                             <button class="button--inline">+ user input</button>
@@ -70,5 +46,6 @@
             </main>
         </div>
 
+        <script src="./js/main.js"></script>
     </body>
 </html>
